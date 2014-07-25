@@ -1,16 +1,16 @@
 #include "abstractfactory_example.h"
+using namespace ABSTRACT_FACTORY_EXAMPLE;
 
-/*****************************
- * Example
- *****************************/
+// Example
+
 Button* WinFactory::createButton()
 {
-	return new WinButton();
+	return new WinButton();	// dynamic_cast <AbstractProduct*> ()
 }
 
 Button* OSXFactory::createButton()
 {
-	return new OSXButton();
+	return new OSXButton();	// dynamic_cast <AbstractProduct*> ()
 }
 
 void WinButton::use()

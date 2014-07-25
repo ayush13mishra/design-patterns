@@ -27,6 +27,12 @@
     <ClInclude Include="abstractfactory_example.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="factorymethod_intfcimpl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="factorymethod_subclassing.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="abstractfactory.cpp">
@@ -36,6 +42,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="abstractfactory_example.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="factorymethod_intfcimpl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="factorymethod_subclassing.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

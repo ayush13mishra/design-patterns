@@ -1,17 +1,16 @@
 #include "abstractfactory.h"
+using namespace ABSTRACT_FACTORY;
 
-/*****************************
-* Concept
-******************************/
+// Concept
 
 AbstractProduct* Factory1::createProduct()
 {
-	return new Product1();
+	return new Product1();	// dynamic_cast <AbstractProduct*> ()
 }
 
 AbstractProduct* Factory2::createProduct()
 {
-	return new Product2();
+	return new Product2();	// dynamic_cast <AbstractProduct*> ()
 }
 
 void Product1::use()

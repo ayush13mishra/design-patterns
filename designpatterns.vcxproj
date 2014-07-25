@@ -81,12 +81,16 @@
   <ItemGroup>
     <ClInclude Include="abstractfactory.h" />
     <ClInclude Include="abstractfactory_example.h" />
+    <ClInclude Include="factorymethod_intfcimpl.h" />
+    <ClInclude Include="factorymethod_subclassing.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="abstractfactory.cpp" />
     <ClCompile Include="abstractfactory_example.cpp" />
     <ClCompile Include="designpatterns.cpp" />
+    <ClCompile Include="factorymethod_intfcimpl.cpp" />
+    <ClCompile Include="factorymethod_subclassing.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

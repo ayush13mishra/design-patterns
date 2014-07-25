@@ -2,9 +2,9 @@
     CONSOLE APPLICATION : designpatterns Project Overview
 ========================================================================
 
-Following
+Abstract factory
+	Following
 	http://en.wikipedia.org/wiki/Abstract_factory_pattern
-
 
 	The abstract factory pattern provides a way
 		to encapsulate a group of individual factories
@@ -19,7 +19,35 @@ Following
 		This pattern separates the details of implementation of a set of objects from their general usage and 
 			relies on object composition, as object creation is implemented in methods exposed in the factory interface.[2]
 
+Factory Method
+	Following
+	http://en.wikipedia.org/wiki/Factory_method_pattern
 
+	In class-based programming,
+	the factory method pattern
+		is a creational pattern which
+			uses factory methods
+			to deal with the problem of creating objects
+				without specifying the exact class of object that will be created.
+			This is done by creating objects via a factory method,
+				which is either
+					specified in an interface (abstract class) and
+					implemented in implementing classes (concrete classes); 
+						or
+					implemented in a base class (optionally as a template method),
+					which can be overridden when inherited in derived classes; rather than by a constructor.
+
+	The factory method pattern should not be confused with the more general notion of factories and factory methods.
+	The factory method pattern is the best-known use of factories and factory methods, 
+		but not all uses of factory methods are examples of the factory method pattern
+			only when inheritance is involved (a class implementing an interface, or derived class, implements a factory method)
+				is it an example of the factory method pattern.
+			More basic uses of factories are not examples of the factory method pattern, and 
+				may instead be referred to as the factory pattern or a simple factory.
+	
+	Define an interface for creating an object, 
+		but let the classes that implement the interface decide which class to instantiate.
+	The Factory method lets a class defer instantiation to subclasses
 
 // -----------------------------------------------------------------------------------------------------------
 
