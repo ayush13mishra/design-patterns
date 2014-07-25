@@ -1,16 +1,39 @@
 // designpatterns.cpp : Defines the entry point for the console application.
 
 /*
+*******************************************************************************************************************
+* SINGLETON
+*******************************************************************************************************************
+*/
+#include "singleton.h"
+void test_Singleton()
+{
+	cout << " -- test_Singleton -- " << endl;
+	using namespace SINGLETON;
+
+	Singleton *p1 = Singleton::getInstance();
+	Singleton *p2 = Singleton::getInstance();
+
+	assert(p1 == p2); // This assertion should pass
+
+	cout << p1 << endl;
+	cout << p2 << endl;
+
+	cout << endl;
+}
+
+
+/*
  *******************************************************************************************************************
- * FACTORY METHOD - START
+ * FACTORY METHOD
  *******************************************************************************************************************
  */
 #include "factorymethod_intfcimpl.h"
 #include "factorymethod_subclassing.h"
 
-void Test_FactoryMethod_UsingInterfaceImpl()
+void test_FactoryMethod_UsingInterfaceImpl()
 {
-	cout << " -- Test_FactoryMethod_UsingInterfaceImpl -- " << endl;
+	cout << " -- test_FactoryMethod_UsingInterfaceImpl -- " << endl;
 	using namespace FACTORY_METHOD__USING_INTERFACE_IMPL;
 	// User knows abstract factory, concrete factory, & abstract product,    but not concrete product
 	//		gets abstract product from concrete factory
@@ -19,26 +42,23 @@ void Test_FactoryMethod_UsingInterfaceImpl()
 	pAP->use(); // User uses  concrete product   without knowning it		// Example: getCarType gives Sedan
 	delete pAP;
 	delete pF;
+
+	cout << endl;
 }
 
-void Test_FactoryMethod_Subclassing()
+void test_FactoryMethod_Subclassing()
 {
-	cout << " -- Test_FactoryMethod_Subclassing -- " << endl;
+	cout << " -- test_FactoryMethod_Subclassing -- " << endl;
 	using namespace FACTORY_METHOD__USING_SUBCLASSING;
 	Container *p1 = new Container();
 	SpecialContainer *p2 = new SpecialContainer();
+
+	cout << endl;
 }
 
 /*
  *******************************************************************************************************************
- * FACTORY METHOD - END
- *******************************************************************************************************************
- */
-
-
-/*
- *******************************************************************************************************************
- * ABSTRACT FACTORY - START
+ * ABSTRACT FACTORY
  *******************************************************************************************************************
  */
 #include "abstractfactory.h"
@@ -86,26 +106,29 @@ void myGUIApp::run() // say this is where framework allows user to write code he
 }
 // --- USER CODE - END ---
 
-void Test_AbstractFactory()
+void test_AbstractFactory()
 {
-	cout << " -- Test_AbstractFactory -- " << endl;
+	cout << " -- test_AbstractFactory -- " << endl;
 	//	Assume this is also framework code
 	(new myApp())->run();
 	(new myGUIApp())->run();
+
+	cout << endl;
 }
 
 /*
  *******************************************************************************************************************
- * ABSTRACT FACTORY - END
  *******************************************************************************************************************
  */
 
 int main(int argc, int *argv[])
 {
-	Test_AbstractFactory();
+	test_AbstractFactory();
 
-	Test_FactoryMethod_UsingInterfaceImpl();
-	Test_FactoryMethod_Subclassing();
+	test_FactoryMethod_UsingInterfaceImpl();
+	test_FactoryMethod_Subclassing();
+
+	test_Singleton();
 
 	return 0;
 }

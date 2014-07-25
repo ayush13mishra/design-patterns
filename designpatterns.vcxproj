@@ -81,8 +81,10 @@
   <ItemGroup>
     <ClInclude Include="abstractfactory.h" />
     <ClInclude Include="abstractfactory_example.h" />
+    <ClInclude Include="common.h" />
     <ClInclude Include="factorymethod_intfcimpl.h" />
     <ClInclude Include="factorymethod_subclassing.h" />
+    <ClInclude Include="singleton.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
@@ -91,6 +93,7 @@
     <ClCompile Include="designpatterns.cpp" />
     <ClCompile Include="factorymethod_intfcimpl.cpp" />
     <ClCompile Include="factorymethod_subclassing.cpp" />
+    <ClCompile Include="singleton.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
