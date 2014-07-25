@@ -24,11 +24,17 @@
     <ClInclude Include="abstractfactory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="abstractfactory_example.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\common.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="abstractfactory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
