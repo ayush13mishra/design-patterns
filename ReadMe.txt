@@ -56,6 +56,14 @@ Singleton
 	The concept is sometimes generalized to systems that operate more efficiently when only one object exists, or 
 		that restrict the instantiation to a certain number of objects.
 		The term comes from the mathematical concept of a singleton.
+Builder
+	The intent of the Builder design pattern is to 
+		separate the construction of a complex object 
+			from its representation.
+	By doing so, the 
+		same construction process 
+		can create different representations.
+
 
 // -----------------------------------------------------------------------------------------------------------
 

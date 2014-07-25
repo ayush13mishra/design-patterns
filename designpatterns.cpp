@@ -1,5 +1,29 @@
 // designpatterns.cpp : Defines the entry point for the console application.
 
+#include "builder.h"
+
+void test_Builder()
+{
+	cout << " -- test_Builder -- " << endl;
+	using namespace BUILDER;
+
+	// Builder
+	// Client creates Director object and configures with Builder object
+	ConcreteBuilder concreteBuilder;
+
+	Director director(concreteBuilder);
+
+	director.Construct(PART1, "Part 1");
+	director.Construct(PART2, "Part 2");
+	// director.Construct(PART3, "Part 3");
+	director.Construct(PART4, "Part 4");
+
+	Product &p = concreteBuilder.getResult();
+	p.see();
+
+	cout << endl;
+}
+
 /*
 *******************************************************************************************************************
 * SINGLETON
@@ -129,6 +153,8 @@ int main(int argc, int *argv[])
 	test_FactoryMethod_Subclassing();
 
 	test_Singleton();
+
+	test_Builder();
 
 	return 0;
 }
