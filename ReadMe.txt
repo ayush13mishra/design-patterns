@@ -78,7 +78,19 @@ Prototype
 			in the standard way (e.g., using the 'new' keyword) 
 			when it is prohibitively expensive for a given application.
 
-
+lazy initialization
+	Following: http://en.wikipedia.org/wiki/Lazy_initialization
+	is the tactic of 
+		delaying
+			the creation of an object, 
+			the calculation of a value, or 
+			some other expensive process 
+				until the first time it is needed.
+	This is typically accomplished by maintaining a flag indicating whether the process has taken place.
+		Each time the desired object is summoned, the flag is tested.
+			If it is ready, it is returned.
+			If not, it is initialized on the spot.
+		In multithreaded code, access to the flag must be synchronized to guard against a race condition.
 
 
 

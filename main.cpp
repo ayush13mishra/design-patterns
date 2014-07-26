@@ -2,6 +2,28 @@
 
 /*
 *******************************************************************************************************************
+* LAZY INITIALIZATION
+*******************************************************************************************************************
+*/
+#include "lazy_initialization.h"
+void test_LazyInitialization()
+{
+	cout << " -- test_LazyInitialization -- " << endl;
+	using namespace LAZY_INITIALIZATION;
+
+	Object *p = LazyInitialization::getObjectInstance();
+	cout << p << endl;
+
+	LazyInitialization::disposeObjectInstance(&p);
+	cout << p << endl;
+	LazyInitialization::disposeObjectInstance(&p);
+	cout << p << endl;
+
+	cout << endl;
+}
+
+/*
+*******************************************************************************************************************
 * PROTOTYPE
 *******************************************************************************************************************
 */
@@ -190,6 +212,8 @@ int main(int argc, int *argv[])
 	test_Builder();
 
 	test_Prototype();
+
+	test_LazyInitialization();
 
 	return 0;
 }
