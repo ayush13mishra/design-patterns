@@ -50,6 +50,8 @@ Factory Method
 	The Factory method lets a class defer instantiation to subclasses
 
 Singleton
+	Following: http://en.wikipedia.org/wiki/Singleton_pattern
+
 	singleton pattern is a design pattern that 
 		restricts the instantiation of a class to one object
 	This is useful when exactly one object is needed to coordinate actions across the system.
@@ -57,12 +59,31 @@ Singleton
 		that restrict the instantiation to a certain number of objects.
 		The term comes from the mathematical concept of a singleton.
 Builder
+	Following: http://en.wikipedia.org/wiki/Builder_pattern
+
 	The intent of the Builder design pattern is to 
 		separate the construction of a complex object 
 			from its representation.
 	By doing so, the 
 		same construction process 
 		can create different representations.
+Prototype
+	Following: http://en.wikipedia.org/wiki/Prototype_pattern
+	prototype pattern
+		is used when the type of objects to create is determined by a prototypical instance, which is cloned to produce new objects.
+		This pattern is used to:
+		* avoid subclasses of an   object creator   in the client application, like the abstract factory pattern does.
+		* avoid the   inherent cost   of   
+			creating a new object   
+			in the standard way (e.g., using the 'new' keyword) 
+			when it is prohibitively expensive for a given application.
+
+
+
+
+
+
+
 
 
 // -----------------------------------------------------------------------------------------------------------

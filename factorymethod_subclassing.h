@@ -22,6 +22,7 @@ namespace FACTORY_METHOD__USING_SUBCLASSING
 		SpecialObject();
 	};
 
+
 	class Container {												// Example: MazeGame
 	public:
 		Container();

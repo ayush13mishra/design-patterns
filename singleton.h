@@ -6,13 +6,15 @@ namespace SINGLETON
 {
 	class Singleton												// Example: Room
 	{
-	private:
-		static Singleton *_instance;
-		Singleton()
-		{ // .. 
-		}
 	public:
 		static Singleton* getInstance();
+		static void disposeInstance();
+	private:
+		Singleton();
+		Singleton(const Singleton&);				// looks no need of copy cons implementation
+		Singleton& operator= (const Singleton&);	// looks no need of asssignment operator implementation
+
+		static Singleton *_pInstance;
 	};
 }
 #endif // SINGLETON_H_INCLUDED

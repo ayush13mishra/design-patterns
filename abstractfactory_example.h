@@ -6,12 +6,23 @@ namespace ABSTRACT_FACTORY_EXAMPLE
 {
 	// Example
 
-	// an abstract product
 	class Button
 	{
 	public:
 		virtual ~Button() { }
 		virtual void use() = 0;
+	};
+
+	class WinButton : public Button
+	{
+	public:
+		virtual void use();
+	};
+
+	class OSXButton : public Button
+	{
+	public:
+		virtual void use();
 	};
 
 
@@ -22,33 +33,18 @@ namespace ABSTRACT_FACTORY_EXAMPLE
 		virtual Button* createButton() = 0;
 	};
 
-
-	// factory1 of product1
 	class WinFactory : public GUIFactory
 	{
 	public:
 		virtual Button* createButton(); // returns 'Product1' as 'AbstractProduct'
 	};
-	// factory2 of product2
+
 	class OSXFactory : public GUIFactory
 	{
 	public:
 		virtual Button* createButton(); // returns 'Product2' as 'AbstractProduct'
 	};
 
-
-	// a product1
-	class WinButton : public Button
-	{
-	public:
-		virtual void use();
-	};
-	// a product2
-	class OSXButton : public Button
-	{
-	public:
-		virtual void use();
-	};
 
 #define USE_FACTORY_DEPENDING_ON_USECASE 1
 #ifdef USE_FACTORY_DEPENDING_ON_USECASE
@@ -59,6 +55,5 @@ namespace ABSTRACT_FACTORY_EXAMPLE
 	{
 	};
 
-	/***************************************************************************************************/
 }
 #endif // ABSTRACT_FACTORY_EXAMPLE_H_INCLUDED

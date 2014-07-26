@@ -4,15 +4,19 @@
 
 namespace BUILDER
 {
-	class Product // Concrete
+	class Product
 	{
 	public:
+		enum PartType
+		{
+			PART1, PART2, PART3, PART4
+		};
 		string part1, part2, part3, part4;
 		void see();
 	};
 
 	// Abstract interface for creating objects (product).
-	class Builder
+	class AbstractBuilder
 	{
 	public:
 		virtual void buildProductPart1(string partValue) = 0;
@@ -22,29 +26,26 @@ namespace BUILDER
 	};
 
 	//	Constructs and assembles parts to build the objects.
-	class ConcreteBuilder : public Builder
+	class Builder : public AbstractBuilder
 	{
-		Product product;
 	public:
 		virtual void buildProductPart1(string partValue);
 		virtual void buildProductPart2(string partValue);
 		virtual void buildProductPart3(string partValue);
 		virtual void buildProductPart4(string partValue);
 		Product& getResult();
+	private:
+		Product product;
 	};
-	// --------------------------------------------------
-	enum PartType
-	{
-		PART1, PART2, PART3, PART4
-	};
+
+
 	class Director
 	{
-		Builder &builder;
 	public:
-		Director(Builder &builder1);
-		void Construct(enum PartType partType, string partValue);
+		Director(AbstractBuilder &builder1);
+		void Construct(enum Product::PartType partType, string partValue);
+	private:
+		AbstractBuilder &builder;
 	};
-	// --------------------------------------------------
-
 }
 #endif // BUILDER_H_INCLUDED

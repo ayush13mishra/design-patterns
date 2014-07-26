@@ -6,7 +6,6 @@ namespace ABSTRACT_FACTORY
 {
 	// Concept
 
-	// an abstract product
 	class AbstractProduct
 	{
 	public:
@@ -14,41 +13,36 @@ namespace ABSTRACT_FACTORY
 		virtual void use() = 0;
 	};
 
+	class Product1 : public AbstractProduct
+	{
+	public:
+		virtual void use();
+	};
 
-	// an abstract facory
+	class Product2 : public AbstractProduct
+	{
+	public:
+		virtual void use();
+	};
+
+
+
 	class AbstractFactory
 	{
 	public:
 		virtual AbstractProduct* createProduct() = 0;
 	};
-
-
-	// factory1 of product1
 	class Factory1 : public AbstractFactory
 	{
 	public:
 		virtual AbstractProduct* createProduct(); // returns 'Product1' as 'AbstractProduct'
 	};
-	// factory2 of product2
 	class Factory2 : public AbstractFactory
 	{
 	public:
 		virtual AbstractProduct* createProduct(); // returns 'Product2' as 'AbstractProduct'
 	};
 
-
-	// a product1
-	class Product1 : public AbstractProduct
-	{
-	public:
-		virtual void use();
-	};
-	// a product2
-	class Product2 : public AbstractProduct
-	{
-	public:
-		virtual void use();
-	};
 
 #define USE_FACTORY_DEPENDING_ON_USECASE 1
 #ifdef USE_FACTORY_DEPENDING_ON_USECASE
@@ -58,6 +52,7 @@ namespace ABSTRACT_FACTORY
 #endif
 	{
 	};
+
 
 	/***************************************************************************************************/
 }

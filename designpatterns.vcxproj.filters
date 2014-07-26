@@ -42,12 +42,12 @@
     <ClInclude Include="builder.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="prototype.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="abstractfactory.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="designpatterns.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="abstractfactory_example.cpp">
@@ -63,6 +63,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="builder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="prototype.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
