@@ -202,17 +202,13 @@ void test_AbstractFactory()
 
 int main(int argc, int *argv[])
 {
+	// Creational patterns
 	test_AbstractFactory();
-
 	test_FactoryMethod_UsingInterfaceImpl();
 	test_FactoryMethod_Subclassing();
-
 	test_Singleton();
-
 	test_Builder();
-
 	test_Prototype();
-
 	test_LazyInitialization();
 
 	return 0;
