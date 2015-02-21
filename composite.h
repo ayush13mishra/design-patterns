@@ -6,26 +6,30 @@
 // distribution and location transparency
 namespace COMPOSITE
 {
-    class IComposite
+    class IComposite                                // Picture
     {
     public:
-        virtual void someOperation() = 0;
+        virtual void someOperation() = 0;           //      Draw
     };
 
-    class Leaf : public IComposite
+    class Composite : public IComposite             // Picture
     {
     public:
-        void someOperation();
-    };
-
-    class Composite : public IComposite
-    {
-        std::list<IComposite *> children;
-    public:
-        void someOperation();
-        void addChild(IComposite *pIC);
+        void addChild(IComposite *pIC);             //      Add a child (Square, Rectangle, Picture, etc.)
         void removeChild(IComposite *pIC);
+        void someOperation();                       //      Draw
+
+    private:
+        std::list<IComposite *> children;
+
     };
+
+    class Leaf : public IComposite                  // Line
+    {
+    public:
+        void someOperation();                       //      Draw
+    };
+
 
 };
 #endif // COMPOSITE_H_INCLUDED

@@ -83,6 +83,7 @@
     <ClInclude Include="builder.h" />
     <ClInclude Include="common.h" />
     <ClInclude Include="composite.h" />
+    <ClInclude Include="decorator.h" />
     <ClInclude Include="facade.h" />
     <ClInclude Include="factorymethod_intfcimpl.h" />
     <ClInclude Include="factorymethod_subclassing.h" />
@@ -90,18 +91,22 @@
     <ClInclude Include="prototype.h" />
     <ClInclude Include="proxy.h" />
     <ClInclude Include="singleton.h" />
+    <ClInclude Include="strategy.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="template_method.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="abstractfactory.cpp" />
     <ClCompile Include="builder.cpp" />
     <ClCompile Include="composite.cpp" />
     <ClCompile Include="composite_use.cpp" />
+    <ClCompile Include="decorator.cpp" />
+    <ClCompile Include="decorator_use.cpp" />
     <ClCompile Include="facade.cpp" />
     <ClCompile Include="facade_use.cpp" />
     <ClCompile Include="lazy_initialization.cpp" />
     <ClCompile Include="lazy_initialization_use.cpp" />
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="_main.cpp" />
     <ClCompile Include="factorymethod_intfcimpl.cpp" />
     <ClCompile Include="factorymethod_subclassing.cpp" />
     <ClCompile Include="prototype.cpp" />
@@ -110,6 +115,10 @@
     <ClCompile Include="proxy_use.cpp" />
     <ClCompile Include="singleton.cpp" />
     <ClCompile Include="singleton_use.cpp" />
+    <ClCompile Include="strategy.cpp" />
+    <ClCompile Include="strategy_use.cpp" />
+    <ClCompile Include="template_method.cpp" />
+    <ClCompile Include="template_method_use.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

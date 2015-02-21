@@ -158,6 +158,9 @@ extern void test_LazyInitialization();
 extern void test_Proxy();
 extern void test_Composite();
 extern void test_Facade();
+extern void test_Decorator();
+extern void test_Template_Method();
+extern void test_Strategy();
 
 int main(int argc, int *argv[])
 {
@@ -174,7 +177,10 @@ int main(int argc, int *argv[])
 
     // test_Proxy();
     // test_Composite();
-    test_Facade();
+    // test_Facade();
+    // test_Decorator();
+    // test_Template_Method();
+    test_Strategy();
 
     return 0;
 }
